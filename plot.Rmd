@@ -5,3 +5,55 @@ date: "10/25/2019"
 output: html_document
 ---
 
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+library(viridis)
+library(p8105.datasets)
+
+library(plotly)
+
+data("instacart")
+
+instacart = 
+  instacart %>% 
+  as_tibble(instacart)
+```
+```{r}
+instacart %>%
+  group_by(aisle) %>%
+  summarise(number = n()) %>%
+  filter(number > 10000) %>% 
+  plot_ly(x =~reorder(aisle,number), y = ~number, color = ~aisle, type = "bar")
+```
+
+```{r}
+
+box_ggplot = 
+  instacart %>%
+  select(product_name, order_hour_of_day) %>%
+  filter(product_name == "Pink Lady Apples" | product_name == "Coffee Ice Cream"|product_name == "Organic Celery Hearts"|product_name == "Spring Water"|product_name == "Bag of Organic Bananas") %>%
+
+  ggplot(aes(x = product_name, y = order_hour_of_day, fill = product_name)) +
+  geom_boxplot() +
+  theme_classic() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+ggplotly(box_ggplot)
+```
+
+```{r}
+dog = 
+  instacart %>%
+  filter(aisle == "dog food care") %>% 
+  select(order_dow, order_hour_of_day) %>% 
+  ggplot(aes(x = order_dow, y = order_hour_of_day, color = price)) +
+  geom_point(alpha = 0.25) +
+  scale_color_viridis() +
+  coord_cartesian() +
+  theme_classic()
+
+ggplotly(scatter_ggplot)
+  
+```
+

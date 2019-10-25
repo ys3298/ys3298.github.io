@@ -10,7 +10,7 @@ navbar:
       href: curriculum_vitae.pdf
       
     - text: "Plots examples"
-      href: dashboard.Rmd
+      href: dashboard.html
       
     - icon: fa-github fa-lg
       href: "https://github.com/ys3298"
@@ -25,4 +25,4 @@ navbar:
       
 output:
    html_document:
-    css: bootstrap.min.css
+    theme: journal

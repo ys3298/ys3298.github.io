@@ -24,7 +24,8 @@ instacart %>%
   group_by(aisle) %>%
   summarise(number = n()) %>%
   filter(number > 10000) %>% 
-  plot_ly(x =~reorder(aisle,number), y = ~number, color = ~aisle, type = "bar")
+  plot_ly(x =~reorder(aisle,number), y = ~number, color = ~aisle, type = "bar") %>%
+  layout(title = "Total number in different aisles")
 ```
 
 ```{r}
@@ -35,25 +36,26 @@ box_ggplot =
   filter(product_name == "Pink Lady Apples" | product_name == "Coffee Ice Cream"|product_name == "Organic Celery Hearts"|product_name == "Spring Water"|product_name == "Bag of Organic Bananas") %>%
 
   ggplot(aes(x = product_name, y = order_hour_of_day, fill = product_name)) +
+  labs(title = "Order time distribution") +
   geom_boxplot() +
   theme_classic() + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
-ggplotly(box_ggplot)
+ggplotly(box_ggplot) 
 ```
 
 ```{r}
-dog = 
-  instacart %>%
-  filter(aisle == "dog food care") %>% 
-  select(order_dow, order_hour_of_day) %>% 
-  ggplot(aes(x = order_dow, y = order_hour_of_day, color = price)) +
-  geom_point(alpha = 0.25) +
-  scale_color_viridis() +
-  coord_cartesian() +
-  theme_classic()
 
-ggplotly(scatter_ggplot)
-  
+  instacart %>%
+  select(order_dow, order_hour_of_day, aisle) %>% 
+  filter(order_dow == 3, order_hour_of_day == 8) %>% 
+  group_by(aisle) %>% 
+  summarize(n = n()) %>% 
+  filter(n >= 100) %>% 
+  mutate(percentage = (n / sum(n))) %>% 
+  plot_ly( labels = ~aisle, values = ~percentage, type = 'pie') %>%
+  layout(title = "Pie plots for order number greater than 100 on 8,Wednesday")
+
+
 ```
 

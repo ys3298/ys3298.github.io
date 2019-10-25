@@ -20,7 +20,8 @@ instacart =
   as_tibble(instacart)
 ```
 ```{r}
-instacart %>%
+bar = 
+  instacart %>%
   group_by(aisle) %>%
   summarise(number = n()) %>%
   filter(number > 10000) %>% 
@@ -39,13 +40,13 @@ box_ggplot =
   labs(title = "Order time distribution") +
   geom_boxplot() +
   theme_classic() + 
-  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) 
 
-ggplotly(box_ggplot) 
+box = ggplotly(box_ggplot) 
 ```
 
 ```{r}
-
+pie =
   instacart %>%
   select(order_dow, order_hour_of_day, aisle) %>% 
   filter(order_dow == 3, order_hour_of_day == 8) %>% 
@@ -55,7 +56,5 @@ ggplotly(box_ggplot)
   mutate(percentage = (n / sum(n))) %>% 
   plot_ly( labels = ~aisle, values = ~percentage, type = 'pie') %>%
   layout(title = "Pie plots for order number greater than 100 on 8,Wednesday")
-
-
 ```
 

@@ -1,0 +1,25 @@
+name: "Yimeng-website"
+navbar:
+  title: "HOME"
+  
+  right:
+    - text: "About me"
+      href: aboutme.html
+      
+    - text: "Resume"
+      href: curriculum_vitae.pdf
+    
+    - icon: fa-github fa-lg
+      href: "https://github.com/ys3298"
+       
+    - icon: fa-linkedin fa-lg
+      href: "https://www.linkedin.com/in/yimeng-shang-384810192/"
+      
+    - icon: fa-envelope fa-lg
+      href: mailto:<ys3298@cumc.columbia.edu>
+      
+      
+      
+output:
+   html_document:
+    css: bootstrap.min.css

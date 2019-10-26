@@ -4,6 +4,7 @@ output:
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
+    theme: journal
 ---
 
 ```{r setup, include=FALSE}
@@ -64,7 +65,7 @@ pie =
   layout(title = "Pie plots for order number greater than 100 on 8,Wednesday")
 ```
 
-Column {data-width=650}
+Column {data-width=450}
 -----------------------------------------------------------------------
 
 ### Chart A
@@ -73,7 +74,7 @@ Column {data-width=650}
 bar
 ```
 
-Column {data-width=350}
+Column {data-width=550}
 -----------------------------------------------------------------------
 
 ### Chart B

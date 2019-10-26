@@ -1,4 +1,5 @@
 name: "Yimeng-website"
+output_dir: "."
 navbar:
   title: "HOME"
   

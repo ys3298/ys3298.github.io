@@ -69,4 +69,4 @@ output:
 # Non-academic interests
 Besides biostatistics, I also interested in lots of things like piano, dancing and my dog.
 
-<img src="mydog.png" style="width:75%">
+<img src="IMG_8969.JPG" style="width:50%">

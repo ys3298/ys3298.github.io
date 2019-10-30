@@ -10,7 +10,7 @@ navbar:
     - text: "Resume"
       href: curriculum_vitae.pdf
       
-    - text: "Plots examples"
+    - text: "dashboard"
       href: dashboard.html
       
     - icon: fa-github fa-lg

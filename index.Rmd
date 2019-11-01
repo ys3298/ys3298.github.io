@@ -9,7 +9,7 @@ output:
 <br/>
 
 # About me
-My name is Yimeng Shang. I'm now a first year biostatistics major student in the Mailman School of Public Health in Columbia University in the city of New York. I'm now taking courses in Biostatistical method, Probability, Data Science, Epidemiology.
+My name is Yimeng Shang. I'm now a first year biostatistics major student in the Mailman School of Public Health in [Columbia University in the city of New York](https://www.columbia.edu/). I'm now taking courses in Biostatistical method, Probability, Data Science, Epidemiology.
 
 Learn more from [here](aboutme.html) and from my [resume](curriculum_vitae.pdf).
 

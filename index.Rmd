@@ -20,5 +20,3 @@ Tel: (646)-704-5390
 
 Email:<ys3298@cumc.columbia.edu>
 
-# Dashboard
-[Here](dashboard.html) are my examples of plots.

@@ -10,8 +10,10 @@ navbar:
     - text: "Resume"
       href: curriculum_vitae.pdf
       
-    - text: "dashboard"
-      href: dashboard.html
+    - text: "Project"
+      menu:
+      - text: "Suicide in U.S."
+        href: https://ys3298.github.io/life_saver.github.io/index.html
       
     - icon: fa-github fa-lg
       href: "https://github.com/ys3298"

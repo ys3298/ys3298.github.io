@@ -43,7 +43,21 @@ output:
 
 <br/>
 
-## Research Experience
+## Research/Project Experience
+
+<br/>
+
+**Gender Pay Gap Claims by Female Doctors at Houston College of Medicine **
+*Course Project*<p align="right">12/2019</p>
+-	Use R to visualize the given data and realize multiple linear regression to quantify associations between salaries and gender as well as any other covariates included in the data
+-	Test confounders and interaction terms between gender and other covariates to build to final model and do related stratification analysis
+
+<br/>
+
+**The Suicide Rate Project **
+*Course Project*<p align="right">11/2019 – 12/2019</p>
+-	Use R to produce time-based graphics indicating number of suicide cases related to multiple risk factors based on the gathered data from different source and realize multiple linear regression to find the main effect
+-	Make a Crude Suicide Rate map allowing users to toggle between different years and choose gender, demonstrating the changes in the suicide rate over time and visualize regional differences across the U.S.
 
 <br/>
 

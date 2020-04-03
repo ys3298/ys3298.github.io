@@ -55,6 +55,24 @@ output:
 
 <br/>
 
+**A prediction model for house saling prices**
+*Course Project:Data science2*<p align="right">03/2020</p>
+- Visualized the data structure and did feature selection
+- Trained both linear models like ridge/lasso regression, pcr regression and non-linear model: MARS regression with tuning parameter selected by cross validation
+- Used resampling methods to get the distribution of RMSE for model selection and chose the best model with minimal RMSE
+- Applied the selected model on the test data to get the test error
+
+<br/>
+
+**A simulation study to compare weak signal detection ability with different variable selection methods**
+*Course Project:The Advanced Topics in Statistical Computing*<p align="right">02/2020</p>
+- Generated high dimension data containing a combination of "strong", "weak but correlated" and "weak and independent" predictors from multivariabte normal distribution
+- Applied both Stepwise Forwad selection and LASSO regression to get the identifacation rate of weak signal under different scenario
+- Performed 1000 simulation by changing the threshold of signals and the number of types of predictors 
+- Compared the parameter estimation ability by comparing MSE under different scenario
+
+<br/>
+
 **Gender Pay Gap Claims by Female Doctors at Houston College of Medicine **
 *Course Project: Biostatistical Method1*<p align="right">12/2019</p>
 -	Use R to visualize the given data and realize multiple linear regression to quantify associations between salaries and gender as well as any other covariates included in the data

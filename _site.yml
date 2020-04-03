@@ -12,6 +12,10 @@ navbar:
       
     - text: "Project"
       menu:
+      - text: "Implementation and optimization of algorithms on breast cancer diagnosis dataset"
+        href: cancer.pdf
+      - text: "A simulation study to compare variable selection methods"
+        href: simulation.pdf
       - text: "Suicide in U.S."
         href: https://ys3298.github.io/life_saver.github.io/index.html
       - text: "Gender Pay Gap Claims by Female Doctors at Houston College of Medicine"

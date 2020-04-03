@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -237,6 +236,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -265,6 +265,12 @@ $(document).ready(function () {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -360,6 +366,12 @@ div.tocify {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+      <a href="cancer.pdf">Implementation and optimization of algorithms on breast cancer diagnosis dataset</a>
+    </li>
+    <li>
+      <a href="simulation.pdf">A simulation study to compare variable selection methods</a>
+    </li>
+    <li>
       <a href="https://ys3298.github.io/life_saver.github.io/index.html">Suicide in U.S.</a>
     </li>
     <li>
@@ -453,7 +465,17 @@ Shanghai, China
 <div id="researchproject-experience" class="section level2">
 <h2>Research/Project Experience</h2>
 <p><br/></p>
-<strong>Gender Pay Gap Claims by Female Doctors at Houston College of Medicine </strong> <em>Course Project</em>
+<strong>Implementation and optimization of algorithms on breast cancer diagnosis dataset</strong> <em>Course Project:The Advanced Topics in Statistical Computing</em>
+<p align="right">
+03/2020
+</p>
+<ul>
+<li>Built a predictive model based on Logistic Regression to facilitate cancer diagnosis</li>
+<li>Trained Logistic Regression models with Newton Raphson, Gradient Decent algorithms from scratch in R (No package used)</li>
+<li>Decreased the misclassification rate by 4%, via implementing a Logistic-LASSO Regression model with Path-wise Coordinate Descent</li>
+</ul>
+<p><br/></p>
+<strong>Gender Pay Gap Claims by Female Doctors at Houston College of Medicine </strong> <em>Course Project: Biostatistical Method1</em>
 <p align="right">
 12/2019
 </p>
@@ -462,7 +484,7 @@ Shanghai, China
 <li>Test confounders and interaction terms between gender and other covariates to build the final model and do related stratification analysis</li>
 </ul>
 <p><br/></p>
-<strong>The Suicide Rate Project </strong> <em>Course Project</em>
+<strong>The Suicide Rate Project </strong> <em>Course Project: Data science</em>
 <p align="right">
 11/2019 – 12/2019
 </p>

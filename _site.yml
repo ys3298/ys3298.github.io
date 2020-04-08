@@ -7,19 +7,11 @@ navbar:
     - text: "About me"
       href: aboutme.html
       
+    - text: "Project"
+      href: Project.html     
+      
     - text: "Resume"
       href: curriculum_vitae.pdf
-      
-    - text: "Project"
-      menu:
-      - text: "Implementation and optimization of algorithms on breast cancer diagnosis dataset"
-        href: cancer.pdf
-      - text: "A simulation study to compare variable selection methods"
-        href: simulation.pdf
-      - text: "Suicide in U.S."
-        href: https://ys3298.github.io/life_saver.github.io/index.html
-      - text: "Gender Pay Gap Claims by Female Doctors at Houston College of Medicine"
-        href: gender_pay_gap_final_report.pdf
       
     - icon: fa-github fa-lg
       href: "https://github.com/ys3298"
@@ -34,4 +26,4 @@ navbar:
       
 output:
    html_document:
-    theme: journal
+    theme: flatly

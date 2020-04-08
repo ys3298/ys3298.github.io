@@ -1,5 +1,4 @@
 ---
-title: "About me"
 output: 
   html_document:
     toc: true
@@ -43,57 +42,6 @@ output:
 
 <br/>
 
-## Research/Project Experience
-
-<br/>
-
-**Implementation and optimization of algorithms on breast cancer diagnosis dataset**
-*Course Project:The Advanced Topics in Statistical Computing*<p align="right">03/2020</p>
-- Built a predictive model based on Logistic Regression to facilitate cancer diagnosis
-- Trained Logistic Regression models with Newton Raphson, Gradient Decent algorithms from scratch in R (No package used)
-- Decreased the misclassification rate by 4%, via implementing a Logistic-LASSO Regression model with Path-wise Coordinate Descent
-
-<br/>
-
-**A prediction model for house saling prices**
-*Course Project:Data science2*<p align="right">03/2020</p>
-- Visualized the data structure and did feature selection
-- Trained both linear models like ridge/lasso regression, pcr regression and non-linear model: MARS regression with tuning parameter selected by cross validation
-- Used resampling methods to get the distribution of RMSE for model selection and chose the best model with minimal RMSE
-- Applied the selected model on the test data to get the test error
-
-<br/>
-
-**A simulation study to compare weak signal detection ability with different variable selection methods**
-*Course Project:The Advanced Topics in Statistical Computing*<p align="right">02/2020</p>
-- Generated high dimension data containing a combination of "strong", "weak but correlated" and "weak and independent" predictors from multivariabte normal distribution
-- Applied both Stepwise Forwad selection and LASSO regression to get the identifacation rate of weak signal under different scenario
-- Performed 1000 simulation by changing the threshold of signals and the number of types of predictors 
-- Compared the parameter estimation ability by comparing MSE under different scenario
-
-<br/>
-
-**Gender Pay Gap Claims by Female Doctors at Houston College of Medicine **
-*Course Project: Biostatistical Method1*<p align="right">12/2019</p>
--	Use R to visualize the given data and realize multiple linear regression to quantify associations between salaries and gender as well as any other covariates included in the data
--	Test confounders and interaction terms between gender and other covariates to build the final model and do related stratification analysis
-
-<br/>
-
-**The Suicide Rate Project **
-*Course Project: Data science*<p align="right">11/2019 – 12/2019</p>
--	Use R to produce time-based graphics indicating number of suicide cases related to multiple risk factors based on the gathered data from different source and realize multiple linear regression to find the main effect
--	Make a Crude Suicide Rate map allowing users to toggle between different years and choose gender, demonstrating the changes in the suicide rate over time and visualize regional differences across the U.S.
-
-<br/>
-
-**Dynamics of Ebola Transmission**
-*Independent Study, Advised by Professor Ping BI*<p align="right">10/2018 – 06/2019</p>
--	Use R to produce time-based graphics indicating number of infections, death toll and infectious victims based on infection cases and death data and realize function fitting via linear regression
--	Describe Ebola outbreak with SEIR dynamic system model, studied existence and stability of balance point with MATLAB and verify solution stability in the method of numerical simulation
-
-<br/>
-
 **Statistical Methods in Medical Research and Development**
 *Independent Study, Advised by Professor Jin XU*<p align="right">08/2018 – 09/2019</p>            
 -	Referred to medical research papers concerning medicines from top 10 pharmaceutical companies around the world and write summaries of the adopted statistical methods
@@ -101,8 +49,20 @@ output:
 
 <br/>
 
+## [Project](Project.html)
+
+<br/>
+
 ## Additional Information 
-**Computer Skills**: R, SAS, SPSS, MATLAB, Python , C++, Microsoft Office Access, Excel 
+**Computer Skills**: R, SAS, SPSS, MATLAB, Python , C++, Microsoft Office Access, Excel
+
+**Courses** : 
+
+Statistical Courses: Biostatistical Method, Data Science, Statistical Inference, Probability, The advanced topics in statistical computing;
+
+Math Courses: Real Analysis, Functional Analysis, Complex Analysis, Measure Theory, Ordinary Differential Equation, Partial Differential Equation, Topology, Differential Geometry;
+
+
 
 <br/>
 

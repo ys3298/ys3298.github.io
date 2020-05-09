@@ -30,13 +30,15 @@ output: html_document
 <tr>
   <td colspan="2">
   
-  * <a href="./reports/covid.pdf"><i style="font-size:24px" class="fa">&#xf1c1;</i></a>
+  * <a href="./reports/mcmc.pdf"><i style="font-size:24px" class="fa">&#xf1c1;</i></a>
   
-  * Constructed a bayesian model and calculated the posterior distribution. 
   
-  * Implemented coordinatewise Metropolis–Hastings Sampling algorithm and sampled from the posterior to get stable Markov Chain (No package used). 
+  * Implemented coordinatewise Metropolis–Hastings Sampling algorithm and sampled from the posterior distribution to get stable Markov Chain (No package used). 
   
-  * Did parameter estimation using the results of Markov Chain and used the parameter to predict other hurricane speed.</td>
+  * Estimated parameters and the numerical standard error and constructed the 95% CI base the results of Markov Chain.
+  
+  * Used the estimated parameters to predict other hurricane speed.</td>
+  
 </tr>
 
 

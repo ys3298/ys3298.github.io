@@ -29,9 +29,11 @@ output:
 **Eli Lilly China**<p align="right">Shanghai, China</p>
 *Intern Data Sciences & Solutions*<p align="right">09/2018 – 06/2019</p>
 
--	Support data management work in clinical trials under supervision of China DSS team and participate in the discussion of statistical methods applied for process design of clinical trials
--	Perform consumer data mining via R, business impact analysis and quantitative analysis of possible interference risks during clinical trials and organization operation
-- Use SAS for database management and statistical analysis based on new evidence research policy
+-	Supported data management work in clinical trials including data cleaning and missing data query under supervision of China DSS team and participate in the discussion of statistical methods applied for process design of clinical trials
+-	Performed consumer data mining via R, business impact analysis and quantitative analysis of possible interference risks during clinical trials and organization operation
+- Developed an automatic web page for reproducible monthly analysis to improve efficiency
+- Used SAS for database management and statistical analysis based on new evidence research policy
+
 
 <br/>
 
@@ -67,6 +69,6 @@ Math Courses: Real Analysis, Functional Analysis, Complex Analysis, Measure Theo
 <br/>
 
 # Non-academic interests
-Besides biostatistics, I also interested in lots of things like piano, dancing and my dog.
+Besides biostatistics, I also interested in lots of things like playing the piano, dancing and my dog.
 
 <img src="IMG_5310.JPG" style="width:50%">

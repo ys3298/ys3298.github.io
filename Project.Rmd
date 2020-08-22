@@ -32,11 +32,9 @@ output: html_document
   * 
   
   
-  * Combined EM algorithm and Adaptive LASSO to estimate sensitivity and specificity of each surrogate, did feature selection and prediction based on this algorithm.
+  * •	Combined EM algorithm and Adaptive LASSO to estimate sensitivity and specificity of each surrogate of ture response, did feature selection and prediction based on this algorithm. Achieved improvement in AUC, ACC, TPR, TNR, PPV, NPV compared to Naive, Ad Hoc method.
   
-  * Constructed multiple simulation studies in different settings, including low dimension and high dimension under different assumptions.
-  
-  * Achieved improvement in AUC, ACC, TPR, TNR, PPV, NPV compared to Naive, Ad Hoc method.
+  * •	Constructed multiple simulation studies in different settings, including low dimension and high dimension under different assumptions and different penalty.
   
   * An academic report is under draft.</td>
   
@@ -66,9 +64,9 @@ output: html_document
   
   * Detected outliers in dataset using PCA.
   
-  * Constructed both logistic regression and Cox hazard model to estimate the effect size. 
+  * Constructed both logistic regression and Cox hazard model to estimate the effect size and tested interaction term.
   
-  * Did power analysis to select the final model and tested interaction term.
+  * Did power analysis to select the final model; After adjusted multiple comparison, found significant association between pseudo uridine and autism
   
   * Used Adaptive LASSO, Random Forest and XGBoosting to select features from high dimensional dataset and fit a final model with selected feature to do prediction.
   

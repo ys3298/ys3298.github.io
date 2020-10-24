@@ -66,7 +66,7 @@ output:
 
 <br/>
 
-## [Project](Project.html)
+## [Projects](Project.html)
 
 <br/>
 
@@ -75,9 +75,9 @@ output:
 
 **Courses** : 
 
-Statistical Courses: Biostatistical Method, Data Science, Statistical Inference, Probability, The advanced topics in statistical computing;
+*Statistical Courses:* Biostatistical Method, Data Science, Statistical Inference, Probability, The advanced topics in statistical computing, Clinical trial methodology, Survival Analysis, Causal inference, Statistical learning and Data mining;
 
-Math Courses: Real Analysis, Functional Analysis, Complex Analysis, Measure Theory, Ordinary Differential Equation, Partial Differential Equation, Topology, Differential Geometry;
+*Math Courses:* Real Analysis, Functional Analysis, Complex Analysis, Measure Theory, Ordinary Differential Equation, Partial Differential Equation, Topology, Differential Geometry;
 
 
 

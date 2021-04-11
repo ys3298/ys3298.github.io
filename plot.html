@@ -340,6 +340,7 @@ instacart =
   filter(number &gt; 10000) %&gt;% 
   plot_ly(x =~reorder(aisle,number), y = ~number, color = ~aisle, type = &quot;bar&quot;) %&gt;%
   layout(title = &quot;Total number in different aisles&quot;)</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
 <pre class="r"><code>box_ggplot = 
   instacart %&gt;%
   select(product_name, order_hour_of_day) %&gt;%
@@ -362,6 +363,7 @@ box = ggplotly(box_ggplot) </code></pre>
   mutate(percentage = (n / sum(n))) %&gt;% 
   plot_ly( labels = ~aisle, values = ~percentage, type = &#39;pie&#39;) %&gt;%
   layout(title = &quot;Pie plots for order number greater than 100 on 8,Wednesday&quot;)</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
 
 
 

@@ -9,18 +9,18 @@ output:
 <br/>
 
 # About me
-My name is Yimeng Shang. I'm now a second year biostatistics major student in the Mailman School of Public Health in [Columbia University in the city of New York](https://www.columbia.edu/). 
+My name is Yimeng Shang, now a first year Ph.D. student in biostatistics in [Penn State University](https://med.psu.edu/biostatistics-phd). I got my Master's degree in the Mailman School of Public Health in [Columbia University in the city of New York](https://www.columbia.edu/). 
 
 I took courses in Biostatistical method, Probability, Statistical Inference, Causal Inference, Data Science, Clinical Trial Methodology, Survival Analysis, Epidemiology, Adcanced Statistical Computing and Data Mining.
 
-I'm interested in analyzing high-dimensional genomics/metabolomics, imaging, and longitudinal data. My research mainly involves doing variable selection, classification, dimension reduction through penalized regression and statistical learning methods. I'm also interested in statistical computing.
+I'm interested in analyzing high-dimensional genomics/metabolomics, and longitudinal data. My research mainly involves doing variable selection, classification, dimension reduction through penalized regression and statistical learning methods. I'm also interested in statistical computing.
 
 Learn more from [here](aboutme.html) and from my [resume](curriculum_vitae.pdf).
 
 ![](IMG_2433.JPG)
 
 # Contact
-Tel: +1 (646)-704-5390 OR +86 153-8826-0313
+Tel: +1 (646)-704-5390 [The United State] OR +86 153-8826-0313 [China]
 
-Email:<ys3298@cumc.columbia.edu> OR <shang_yimeng@163.com>
+Email:<ymshang@psu.edu> OR <shang_yimeng@163.com>
 

@@ -7,7 +7,7 @@ navbar:
     - text: "About me"
       href: aboutme.html
       
-    - text: "Project"
+    - text: "Projects"
       href: Project.html     
       
     - text: "Resume"

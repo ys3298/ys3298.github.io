@@ -26,7 +26,7 @@ output: html_document
 <tr>
   <td colspan="2">
   
-  * 
+  * <a href="./reports/covid_report.pdf"><i style="font-size:24px" class="fa">&#xf1c1;</i></a>
   
   
   * Built longitudinal regression models to identify the risk factors for PTSD using longitudinal follow up data
@@ -34,8 +34,6 @@ output: html_document
   * Used GEE to build longitudinal models with different correlation structure; Used Hosmer-Lemeshow test to check goodness of fit
   
   * Applied factor analysis and penalized regression for dimension reduction and variable selection
-  
-  * A manuscript is prepared for publication with expected date of 2021
   
 </tr>
 

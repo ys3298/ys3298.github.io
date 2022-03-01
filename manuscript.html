@@ -9,30 +9,42 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Yimeng SHANG" />
 
-<meta name="date" content="2019-10-25" />
 
-<title>plot</title>
+<title>manuscript.knit</title>
 
+<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
-<style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -45,32 +57,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 
 
@@ -80,10 +67,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -100,40 +83,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 60px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h2 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h3 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h4 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h5 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h6 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -161,7 +117,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -173,7 +129,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -184,10 +140,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -199,7 +168,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -285,6 +253,9 @@ $(document).ready(function () {
   <a href="Project.html">Projects</a>
 </li>
 <li>
+  <a href="manuscript.html">Manuscripts</a>
+</li>
+<li>
   <a href="curriculum_vitae.pdf">Resume</a>
 </li>
 <li>
@@ -310,60 +281,25 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
-<h1 class="title toc-ignore">plot</h1>
-<h4 class="author">Yimeng SHANG</h4>
-<h4 class="date">10/25/2019</h4>
 
 </div>
 
 
-<pre class="r"><code>library(tidyverse)
-library(p8105.datasets)
-library(viridis)
-library(p8105.datasets)
-
-library(plotly)
-
-data(&quot;instacart&quot;)
-
-instacart = 
-  instacart %&gt;% 
-  as_tibble(instacart)</code></pre>
-<pre class="r"><code>bar = 
-  instacart %&gt;%
-  group_by(aisle) %&gt;%
-  summarise(number = n()) %&gt;%
-  filter(number &gt; 10000) %&gt;% 
-  plot_ly(x =~reorder(aisle,number), y = ~number, color = ~aisle, type = &quot;bar&quot;) %&gt;%
-  layout(title = &quot;Total number in different aisles&quot;)</code></pre>
-<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
-<pre class="r"><code>box_ggplot = 
-  instacart %&gt;%
-  select(product_name, order_hour_of_day) %&gt;%
-  filter(product_name == &quot;Pink Lady Apples&quot; | product_name == &quot;Coffee Ice Cream&quot;|product_name == &quot;Organic Celery Hearts&quot;|product_name == &quot;Spring Water&quot;|product_name == &quot;Bag of Organic Bananas&quot;) %&gt;%
-
-  ggplot(aes(x = product_name, y = order_hour_of_day, fill = product_name)) +
-  labs(title = &quot;Order time distribution&quot;) +
-  geom_boxplot() +
-  theme_classic() + 
-  theme(axis.text.x = element_text(angle = 90, hjust = 1)) 
-
-box = ggplotly(box_ggplot) </code></pre>
-<pre class="r"><code>pie =
-  instacart %&gt;%
-  select(order_dow, order_hour_of_day, aisle) %&gt;% 
-  filter(order_dow == 3, order_hour_of_day == 8) %&gt;% 
-  group_by(aisle) %&gt;% 
-  summarize(n = n()) %&gt;% 
-  filter(n &gt;= 100) %&gt;% 
-  mutate(percentage = (n / sum(n))) %&gt;% 
-  plot_ly( labels = ~aisle, values = ~percentage, type = &#39;pie&#39;) %&gt;%
-  layout(title = &quot;Pie plots for order number greater than 100 on 8,Wednesday&quot;)</code></pre>
-<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/6e8b08f469.js" crossorigin="anonymous"></script>
+<h2>
+<b>Manuscripts</b>
+</h2>
+<table>
+<col width="20%">
+<col width="30%">
+<col width="50%">
+<p>Shechter, Ari &amp; Chiuzan, Cody &amp; Shang, Yimeng &amp; Ko, Gavin &amp; Diaz, Franchesca &amp; Venner, Hadiah &amp; Shaw, Kaitlin &amp; Cannone, Diane &amp; McMurry, Cara &amp; Sullivan, Alexandra &amp; Rivera, Reynaldo &amp; Vose, Courtney &amp; Shapiro, Peter &amp; Abdalla, Marwah. (2021). Prevalence, Incidence, and Factors Associated with Posttraumatic Stress at Three-Month Follow-Up among New York City Healthcare Workers after the First Wave of the COVID-19 Pandemic. International Journal of Environmental Research and Public Health. 19. 262. 10.3390/ijerph19010262.</p>
+<p>Abdalla, Marwah &amp; Chiuzan, Cody &amp; Shang, Yimeng &amp; Ko, Gavin &amp; Diaz, Franchesca &amp; Shaw, Kaitlin &amp; McMurry, Cara &amp; Cannone, Diane &amp; Sullivan, Alexandra &amp; Lee, Sung A &amp; Venner, Hadiah &amp; Shechter, Ari. (2021). Factors Associated with Insomnia Symptoms in a Longitudinal Study among New York City Healthcare Workers during the COVID-19 Pandemic. International journal of environmental research and public health. 18. 10.3390/ijerph18178970.</p>
 
 
 
@@ -374,7 +310,7 @@ box = ggplotly(box_ggplot) </code></pre>
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -392,7 +328,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

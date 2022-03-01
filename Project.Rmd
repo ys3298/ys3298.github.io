@@ -14,7 +14,6 @@ output: html_document
 
 
 
-
 <tr style="border-top:1pt solid black;">
   <th rowspan="3"><img src="./plots/covid_ptsd.png" style="width:300%; float:left" class="center image-square"></a></th>
   <td style="vertical-align: bottom"><font color="8B8A8A">12/2020-03/2021</font></td>
@@ -26,8 +25,7 @@ output: html_document
 <tr>
   <td colspan="2">
   
-  * <a href="./reports/covid_report.pdf"><i style="font-size:24px" class="fa">&#xf1c1;</i></a>
-  
+  * <a href="./reports/covid_report.pdf"><i style="font-size:24px" class="fa">&#xf1c1;</i></a>  <a href="./reports/Prevalence_Incidence_and_Factors_Associated_with_P.pdf"><i style="font-size:24px" class="fa">&#xf1c1;</i></a>
   
   * Built longitudinal regression models to identify the risk factors for PTSD using longitudinal follow up data
   

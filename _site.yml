@@ -8,7 +8,10 @@ navbar:
       href: aboutme.html
       
     - text: "Projects"
-      href: Project.html     
+      href: Project.html 
+      
+    - text: "Manuscripts"
+      href: manuscript.html
       
     - text: "Resume"
       href: curriculum_vitae.pdf

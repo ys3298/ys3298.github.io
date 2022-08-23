@@ -6,13 +6,20 @@ output: html_document
 <link rel="stylesheet" href="style.css">
 <script src="https://kit.fontawesome.com/6e8b08f469.js" crossorigin="anonymous"></script>
 
-<h2><b>Manuscripts</b></h2>
+<h2><b>Publications</b></h2>
 
 <table>
 <col width="20%">
 <col width="30%">
 <col width="50%">
 
+
+
+## 2022
+
+Endres K M, Kierys K, Shang Y, et al. A Multicenter Retrospective Evaluation of Specialized Laboratory Investigations in the Workup of Pediatric Patients With New-Onset Supraventricular Tachycardia[J]. Journal of Emergency Nursing, 2022.
+
+## 2021
 
 Shechter, Ari & Chiuzan, Cody & Shang, Yimeng & Ko, Gavin & Diaz, Franchesca & Venner, Hadiah & Shaw, Kaitlin & Cannone, Diane & McMurry, Cara & Sullivan, Alexandra & Rivera, Reynaldo & Vose, Courtney & Shapiro, Peter & Abdalla, Marwah. (2021). Prevalence, Incidence, and Factors Associated with Posttraumatic Stress at Three-Month Follow-Up among New York City Healthcare Workers after the First Wave of the COVID-19 Pandemic. International Journal of Environmental Research and Public Health. 19. 262. 10.3390/ijerph19010262. 
 

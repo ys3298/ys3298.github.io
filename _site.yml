@@ -10,7 +10,7 @@ navbar:
     - text: "Projects"
       href: Project.html 
       
-    - text: "Manuscripts"
+    - text: "Publications"
       href: manuscript.html
       
     - text: "Resume"

@@ -13,8 +13,8 @@
 
 <title>Project.knit</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -62,6 +62,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -82,6 +83,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -139,11 +143,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -172,8 +180,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -181,16 +189,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -234,7 +235,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -257,6 +258,9 @@ $(document).ready(function () {
 </li>
 <li>
   <a href="curriculum_vitae.pdf">Resume</a>
+</li>
+<li>
+  <a href="eTranscript.pdf">Transcript</a>
 </li>
 <li>
   <a href="https://github.com/ys3298">
@@ -298,6 +302,8 @@ $(document).ready(function () {
 <col width="20%">
 <col width="30%">
 <col width="50%">
+<p>Please see the latest projects in my <a
+href="curriculum_vitae.pdf">resume</a>.</p>
 <tr style="border-top:1pt solid black;">
 <th rowspan="3">
 <img src="plots/covid_ptsd.png" style="width:300%; float:left" class="center image-square"></a>
@@ -306,24 +312,30 @@ $(document).ready(function () {
 <font color="8B8A8A">12/2020-03/2021</font>
 </td>
 <td style="text-align:right; vertical-align:bottom">
-<font color="8B8A8A">- Research assistant, supervised by Professor Codruta Chiuzan, <br>Columbia University</font>
+<font color="8B8A8A">- Research assistant, supervised by Professor
+Codruta Chiuzan, <br>Columbia University</font>
 </td>
 </tr>
 <tr>
 <td colspan="2" style="height:20px; vertical-align:middle">
 <h3>
-<b>COVID-19 Psychological Distress Among Healthcare Workers at Follow-up</b>
+<b>COVID-19 Psychological Distress Among Healthcare Workers at
+Follow-up</b>
 </h3>
 </td>
 </tr>
 <tr>
 <td colspan="2">
 <ul>
-<li><p><a href="./reports/covid_report.pdf"><i style="font-size:24px" class="fa"></i></a> <a href="./reports/Prevalence_Incidence_and_Factors_Associated_with_P.pdf"><i style="font-size:24px" class="fa"></i></a></p>
+<li><p><a href="./reports/covid_report.pdf"><i style="font-size:24px" class="fa"></i></a>
+<a href="./reports/Prevalence_Incidence_and_Factors_Associated_with_P.pdf"><i style="font-size:24px" class="fa"></i></a></p>
 <ul>
-<li><p>Built longitudinal regression models to identify the risk factors for PTSD using longitudinal follow up data</p></li>
-<li><p>Used GEE to build longitudinal models with different correlation structure; Used Hosmer-Lemeshow test to check goodness of fit</p></li>
-<li><p>Applied factor analysis and penalized regression for dimension reduction and variable selection</p></li>
+<li><p>Built longitudinal regression models to identify the risk factors
+for PTSD using longitudinal follow up data</p></li>
+<li><p>Used GEE to build longitudinal models with different correlation
+structure; Used Hosmer-Lemeshow test to check goodness of fit</p></li>
+<li><p>Applied factor analysis and penalized regression for dimension
+reduction and variable selection</p></li>
 </ul></li>
 </ul>
 </tr>
@@ -335,13 +347,15 @@ $(document).ready(function () {
 <font color="8B8A8A">05/2020-12/2020</font>
 </td>
 <td style="text-align:right; vertical-align:bottom">
-<font color="8B8A8A">- Research assistant, supervised by Professor Hua Shen, <br>University of Calgary</font>
+<font color="8B8A8A">- Research assistant, supervised by Professor Hua
+Shen, <br>University of Calgary</font>
 </td>
 </tr>
 <tr>
 <td colspan="2" style="height:20px; vertical-align:middle">
 <h3>
-<b>Variable Selection and Prediction in Logistic Regression with Misclassification in the Response Variable</b>
+<b>Variable Selection and Prediction in Logistic Regression with
+Misclassification in the Response Variable</b>
 </h3>
 </td>
 </tr>
@@ -349,9 +363,15 @@ $(document).ready(function () {
 <td colspan="2">
 <ul>
 <li><ul>
-<li><p>Combined EM algorithm and Adaptive LASSO to estimate sensitivity and specificity of each surrogate, did feature selection and prediction based on this algorithm.</p></li>
-<li><p>Constructed multiple simulation studies under different settings, including low dimensional data and high dimensional data under different assumptions, different penalty terms and different tuning parameter selection criteria</p></li>
-<li><p>Achieved improvement in parameter estimation, feature selection and prediction compared to the Naïve method and Ad Hoc method</p></li>
+<li><p>Combined EM algorithm and Adaptive LASSO to estimate sensitivity
+and specificity of each surrogate, did feature selection and prediction
+based on this algorithm.</p></li>
+<li><p>Constructed multiple simulation studies under different settings,
+including low dimensional data and high dimensional data under different
+assumptions, different penalty terms and different tuning parameter
+selection criteria</p></li>
+<li><p>Achieved improvement in parameter estimation, feature selection
+and prediction compared to the Naïve method and Ad Hoc method</p></li>
 <li><p>An academic report is under draft.</p>
 </td></li>
 </ul></li>
@@ -365,7 +385,8 @@ $(document).ready(function () {
 <font color="8B8A8A">05/2020-08/2020</font>
 </td>
 <td style="text-align:right; vertical-align:bottom">
-<font color="8B8A8A">- Research assistant, supervised by Professor Xiaoyu Che, <br>Columbia University</font>
+<font color="8B8A8A">- Research assistant, supervised by Professor
+Xiaoyu Che, <br>Columbia University</font>
 </td>
 </tr>
 <tr>
@@ -379,10 +400,18 @@ $(document).ready(function () {
 <td colspan="2">
 <ul>
 <li><ul>
-<li><p>Constructed both logistic regression and Cox hazard model to estimate the effect size; did power analysis to select the model and tested interaction term; After adjusted multiple comparison, found significant association between pseudo uridine and autism</p></li>
-<li><p>Applied Bayesian generalized linear models to calculate credible intervals and select analytes with Bayesian factor greater than 3</p></li>
-<li><p>Used Adaptive LASSO, Random Forest and XGBoosting to select features from high dimensional metabolomics dataset and fit a final model with selected feature to do prediction</p></li>
-<li><p>Constructed conditional logistic regression, feature selection and prediction base on one to one matched dataset</p></li>
+<li><p>Constructed both logistic regression and Cox hazard model to
+estimate the effect size; did power analysis to select the model and
+tested interaction term; After adjusted multiple comparison, found
+significant association between pseudo uridine and autism</p></li>
+<li><p>Applied Bayesian generalized linear models to calculate credible
+intervals and select analytes with Bayesian factor greater than
+3</p></li>
+<li><p>Used Adaptive LASSO, Random Forest and XGBoosting to select
+features from high dimensional metabolomics dataset and fit a final
+model with selected feature to do prediction</p></li>
+<li><p>Constructed conditional logistic regression, feature selection
+and prediction base on one to one matched dataset</p></li>
 <li><p>A manuscript is prepared</p>
 </td></li>
 </ul></li>
@@ -411,9 +440,13 @@ $(document).ready(function () {
 <ul>
 <li><p><a href="./reports/mcmc.pdf"><i style="font-size:24px" class="fa"></i></a></p>
 <ul>
-<li><p>Implemented coordinatewise Metropolis–Hastings Sampling algorithm and sampled from the posterior distribution to get stable Markov Chain (No package used).</p></li>
-<li><p>Estimated parameters and the numerical standard error and constructed the 95% CI base the results of Markov Chain.</p></li>
-<li><p>Used the estimated parameters to predict other hurricane speed.</p>
+<li><p>Implemented coordinatewise Metropolis–Hastings Sampling algorithm
+and sampled from the posterior distribution to get stable Markov Chain
+(No package used).</p></li>
+<li><p>Estimated parameters and the numerical standard error and
+constructed the 95% CI base the results of Markov Chain.</p></li>
+<li><p>Used the estimated parameters to predict other hurricane
+speed.</p>
 </td></li>
 </ul></li>
 </ul>
@@ -441,10 +474,17 @@ $(document).ready(function () {
 <ul>
 <li><p><a href="./reports/covid.pdf"><i style="font-size:24px" class="fa"></i></a></p>
 <ul>
-<li><p>Trained logistic curve model to fit the COVID-19 cases data.</p></li>
-<li><p>Estimated parameters using the combination of Ordinary Differential Equation method and Gradient Descent model. First used ODE to get the initial guess and plug into gradient descent to estimate the parameters (No package used).</p></li>
-<li><p>Implemented both Gaussian Mixture Model with EM algorithm and Kmeans algorithm to cluster the estimated parameters for each countries (No package used).</p></li>
-<li><p>Used the clustering results drawing world to visulized the distribution of clusters to see the geometric association.</p>
+<li><p>Trained logistic curve model to fit the COVID-19 cases
+data.</p></li>
+<li><p>Estimated parameters using the combination of Ordinary
+Differential Equation method and Gradient Descent model. First used ODE
+to get the initial guess and plug into gradient descent to estimate the
+parameters (No package used).</p></li>
+<li><p>Implemented both Gaussian Mixture Model with EM algorithm and
+Kmeans algorithm to cluster the estimated parameters for each countries
+(No package used).</p></li>
+<li><p>Used the clustering results drawing world to visulized the
+distribution of clusters to see the geometric association.</p>
 </td>
 </tr></li>
 </ul></li>
@@ -463,7 +503,8 @@ $(document).ready(function () {
 <tr>
 <td colspan="2" style="height:20px; vertical-align:middle">
 <h3>
-<b>Implementation and Optimization of Algorithms on Cancer Diagnosis Dataset</b>
+<b>Implementation and Optimization of Algorithms on Cancer Diagnosis
+Dataset</b>
 </h3>
 </td>
 </tr>
@@ -472,9 +513,13 @@ $(document).ready(function () {
 <ul>
 <li><p><a href="./reports/cancer.pdf"><i style="font-size:24px" class="fa"></i></a></p>
 <ul>
-<li><p>Built a predictive model based on Logistic Regression to facilitate cancer diagnosis.</p></li>
-<li><p>Trained Logistic Regression models with Newton Raphson, Gradient Decent algorithms from scratch in R (No package used).</p></li>
-<li><p>Decreased the misclassification rate by 4%, via implementing a Logistic-LASSO Regression model with Path-wise Coordinate Descent (No package used).</p>
+<li><p>Built a predictive model based on Logistic Regression to
+facilitate cancer diagnosis.</p></li>
+<li><p>Trained Logistic Regression models with Newton Raphson, Gradient
+Decent algorithms from scratch in R (No package used).</p></li>
+<li><p>Decreased the misclassification rate by 4%, via implementing a
+Logistic-LASSO Regression model with Path-wise Coordinate Descent (No
+package used).</p>
 </td>
 </tr></li>
 </ul></li>
@@ -503,9 +548,13 @@ $(document).ready(function () {
 <li><p><a href="./reports/house.pdf"><i style="font-size:24px" class="fa"></i></a></p>
 <ul>
 <li><p>Visualized the data structure and did feature selection.</p></li>
-<li><p>Trained both linear models like ridge/lasso regression, pcr regression and non-linear model: MARS regression with tuning parameter selected by cross validation.</p></li>
-<li><p>Used resampling methods to get the distribution of RMSE for model selection and chose the best model with minimal RMSE.</p></li>
-<li><p>Applied the selected model on the test data to get the test error.</p>
+<li><p>Trained both linear models like ridge/lasso regression, pcr
+regression and non-linear model: MARS regression with tuning parameter
+selected by cross validation.</p></li>
+<li><p>Used resampling methods to get the distribution of RMSE for model
+selection and chose the best model with minimal RMSE.</p></li>
+<li><p>Applied the selected model on the test data to get the test
+error.</p>
 </td>
 </tr></li>
 </ul></li>
@@ -524,7 +573,8 @@ $(document).ready(function () {
 <tr>
 <td colspan="2" style="height:20px; vertical-align:middle">
 <h3>
-<b>A Simulation Study to Compare Weak Signal Detection Ability with Different Variable Selection Methods</b>
+<b>A Simulation Study to Compare Weak Signal Detection Ability with
+Different Variable Selection Methods</b>
 </h3>
 </td>
 </tr>
@@ -533,10 +583,16 @@ $(document).ready(function () {
 <ul>
 <li><p><a href="./reports/simulation.pdf"><i style="font-size:24px" class="fa"></i></a></p>
 <ul>
-<li><p>Generated high dimension data containing a combination of “strong”, “weak but correlated” and “weak and independent” predictors from multivariabte normal distribution.</p></li>
-<li><p>Applied both Stepwise Forwad selection and LASSO regression to get the identifacation rate of weak signal under different scenario.</p></li>
-<li><p>Performed 1000 simulation by changing the threshold of signals and the number of types of predictors.</p></li>
-<li><p>Compared the parameter estimation ability by comparing MSE under different scenario.</p>
+<li><p>Generated high dimension data containing a combination of
+“strong”, “weak but correlated” and “weak and independent” predictors
+from multivariabte normal distribution.</p></li>
+<li><p>Applied both Stepwise Forwad selection and LASSO regression to
+get the identifacation rate of weak signal under different
+scenario.</p></li>
+<li><p>Performed 1000 simulation by changing the threshold of signals
+and the number of types of predictors.</p></li>
+<li><p>Compared the parameter estimation ability by comparing MSE under
+different scenario.</p>
 </td>
 </tr></li>
 </ul></li>
@@ -555,7 +611,8 @@ $(document).ready(function () {
 <tr>
 <td colspan="2" style="height:20px; vertical-align:middle">
 <h3>
-<b>Gender Pay Gap Claims by Female Doctors at Houston College of Medicine</b>
+<b>Gender Pay Gap Claims by Female Doctors at Houston College of
+Medicine</b>
 </h3>
 </td>
 </tr>
@@ -564,8 +621,12 @@ $(document).ready(function () {
 <ul>
 <li><p><a href="./reports/gender.pdf"><i style="font-size:24px" class="fa"></i></a></p>
 <ul>
-<li><p>Used R programming to visualize the given data and realized multiple linear regression to quantify associations between salaries and gender as well as any other covariates included in the data.</p></li>
-<li><p>Tested confounders and interaction terms between gender and other covariates to build the final model and do related stratification analysis.</p>
+<li><p>Used R programming to visualize the given data and realized
+multiple linear regression to quantify associations between salaries and
+gender as well as any other covariates included in the data.</p></li>
+<li><p>Tested confounders and interaction terms between gender and other
+covariates to build the final model and do related stratification
+analysis.</p>
 </td>
 </tr></li>
 </ul></li>
@@ -593,8 +654,14 @@ $(document).ready(function () {
 <ul>
 <li><p><a href="https://ys3298.github.io/life_saver.github.io/index.html"><i class="fa fa-internet-explorer" style="font-size:24px"></i></a></p>
 <ul>
-<li><p>Used R to produce time-based graphics indicating number of suicide cases related to multiple risk factors based on the gathered data from different source and realized multiple linear regression to find the main effect.</p></li>
-<li><p>Made a Crude Suicide Rate map allowing users to toggle between different years and choose gender, demonstrating the changes in the suicide rate over time and visualize regional differences across the U.S.</p>
+<li><p>Used R to produce time-based graphics indicating number of
+suicide cases related to multiple risk factors based on the gathered
+data from different source and realized multiple linear regression to
+find the main effect.</p></li>
+<li><p>Made a Crude Suicide Rate map allowing users to toggle between
+different years and choose gender, demonstrating the changes in the
+suicide rate over time and visualize regional differences across the
+U.S.</p>
 </td>
 </tr></li>
 </ul></li>
@@ -621,8 +688,13 @@ $(document).ready(function () {
 <td colspan="2">
 <ul>
 <li><ul>
-<li><p>Used R programming to produce time-based graphics indicating number of infections, death toll and infectious victims based on infection cases and death data and realized function fitting via linear regression.</p></li>
-<li><p>Described Ebola outbreak with SEIR dynamic system model, studied existence and stability of balance point with MATLAB and verified solution stability in the method of numerical simulation .</p>
+<li><p>Used R programming to produce time-based graphics indicating
+number of infections, death toll and infectious victims based on
+infection cases and death data and realized function fitting via linear
+regression.</p></li>
+<li><p>Described Ebola outbreak with SEIR dynamic system model, studied
+existence and stability of balance point with MATLAB and verified
+solution stability in the method of numerical simulation .</p>
 </td>
 </tr></li>
 </ul></li>

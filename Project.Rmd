@@ -12,6 +12,7 @@ output: html_document
 <col width="30%">
 <col width="50%">
 
+Please see the latest projects in my [resume](curriculum_vitae.pdf).
 
 
 <tr style="border-top:1pt solid black;">

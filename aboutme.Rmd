@@ -27,6 +27,16 @@ output:
 
 <br/>
 
+**Pennsylvania State University**<p align="right">Hershey, PA</p>
+*Graduate Teaching Assistant*<p align="right">01/2022 – 05/2022</p>
+
+- Course: Biostatistical Methods, department of Biostatistics, Pennsylvania State University                
+
+-	Prepared homework problem solutions; Graded homework and exams; Held weekly office hours. 
+
+
+<br/>
+
 
 **Columbia University**<p align="right">New York City, NY</p>
 *Graduate Teaching Assistant*<p align="right">09/2020 – 12/2020</p>
@@ -45,6 +55,11 @@ output:
 **Cytel**<p align="right">Shanghai, China</p>
 *Strategic Consulting Summer Intern*<p align="right">06/2021 – 08/2022</p>
 
+- Proposed predictive variable selection algorithm via knockoff filters 
+- Developed Shiny App to implement the proposed algorithm
+- Supported clinical trial design simulation project and wrote the statistical analysis plan for FDA submission 
+
+<br/>
 
 **Eli Lilly China**<p align="right">Shanghai, China</p>
 *Intern Data Sciences & Solutions*<p align="right">09/2018 – 06/2019</p>
@@ -80,7 +95,7 @@ output:
 
 **Courses** : 
 
-*Statistical Courses:* Biostatistical Method, Data Science, Statistical Inference, Probability, The Advanced Topics in Statistical Computing, Clinical Trial Methodology, Survival Analysis, Causal Inference, Statistical Learning and Data Mining;
+*Statistical Courses:* Biostatistics Method, Data Science, Statistical Inference, Probability, The Advanced Topics in Statistical Computing, Clinical Trial Methodology, Survival Analysis, Causal Inference, Statistical Learning and Data Mining;
 
 *Math Courses:* Real Analysis, Functional Analysis, Complex Analysis, Measure Theory, Ordinary Differential Equation, Partial Differential Equation, Topology, Differential Geometry;
 

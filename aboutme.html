@@ -13,8 +13,8 @@
 
 <title>aboutme.knit</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -65,6 +65,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -85,6 +86,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -142,11 +146,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -175,8 +183,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -184,16 +192,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -310,7 +311,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -333,6 +334,9 @@ div.tocify {
 </li>
 <li>
   <a href="curriculum_vitae.pdf">Resume</a>
+</li>
+<li>
+  <a href="eTranscript.pdf">Transcript</a>
 </li>
 <li>
   <a href="https://github.com/ys3298">
@@ -375,15 +379,18 @@ div.tocify {
 <p align="right">
 08/2021 – 05/2025
 </p>
-<strong>Columbia University in the city of New York</strong> (M.S. in Biostatistics, Theory and Methods) GPA:4.0/4.0
+<strong>Columbia University in the city of New York</strong> (M.S. in
+Biostatistics, Theory and Methods) GPA:4.0/4.0
 <p align="right">
 08/2019 – 04/2021
 </p>
-<strong>East China Normal University</strong> (B.S. in Mathematics and Applied Mathematics)
+<strong>East China Normal University</strong> (B.S. in Mathematics and
+Applied Mathematics)
 <p align="right">
 09/2015 - 06/2019
 </p>
-<strong>University of California, Berkeley</strong> (International Study Program, Math &amp; Stat)
+<strong>University of California, Berkeley</strong> (International Study
+Program, Math &amp; Stat)
 <p align="right">
 08/2017 - 05/2018
 </p>
@@ -391,6 +398,21 @@ div.tocify {
 </div>
 <div id="teaching" class="section level2">
 <h2>Teaching</h2>
+<p><br/></p>
+<strong>Pennsylvania State University</strong>
+<p align="right">
+Hershey, PA
+</p>
+<em>Graduate Teaching Assistant</em>
+<p align="right">
+01/2022 – 05/2022
+</p>
+<ul>
+<li><p>Course: Biostatistical Methods, department of Biostatistics,
+Pennsylvania State University</p></li>
+<li><p>Prepared homework problem solutions; Graded homework and exams;
+Held weekly office hours.</p></li>
+</ul>
 <p><br/></p>
 <strong>Columbia University</strong>
 <p align="right">
@@ -401,8 +423,11 @@ New York City, NY
 09/2020 – 12/2020
 </p>
 <ul>
-<li><p>Course: BISTP8130 Biostatistical Methods I (95 students), department of Biostatistics, Columbia University</p></li>
-<li><p>Prepared homework and exam problem set and solutions; Graded homework and exams; Held weekly office hours; Attended lectures and answered questions.</p></li>
+<li><p>Course: BISTP8130 Biostatistical Methods I (95 students),
+department of Biostatistics, Columbia University</p></li>
+<li><p>Prepared homework and exam problem set and solutions; Graded
+homework and exams; Held weekly office hours; Attended lectures and
+answered questions.</p></li>
 </ul>
 <p><br/></p>
 </div>
@@ -417,6 +442,14 @@ Shanghai, China
 <p align="right">
 06/2021 – 08/2022
 </p>
+<ul>
+<li>Proposed predictive variable selection algorithm via knockoff
+filters</li>
+<li>Developed Shiny App to implement the proposed algorithm</li>
+<li>Supported clinical trial design simulation project and wrote the
+statistical analysis plan for FDA submission</li>
+</ul>
+<p><br/></p>
 <strong>Eli Lilly China</strong>
 <p align="right">
 Shanghai, China
@@ -426,10 +459,17 @@ Shanghai, China
 09/2018 – 06/2019
 </p>
 <ul>
-<li>Supported data management work in clinical trials including data cleaning and missing data query under supervision of China DSS team and participate in the discussion of statistical methods applied for process design of clinical trials</li>
-<li>Performed consumer data mining via R, business impact analysis and quantitative analysis of possible interference risks during clinical trials and organization operation</li>
-<li>Developed an automatic web page for reproducible monthly analysis to improve efficiency</li>
-<li>Used SAS for database management and statistical analysis based on new evidence research policy</li>
+<li>Supported data management work in clinical trials including data
+cleaning and missing data query under supervision of China DSS team and
+participate in the discussion of statistical methods applied for process
+design of clinical trials</li>
+<li>Performed consumer data mining via R, business impact analysis and
+quantitative analysis of possible interference risks during clinical
+trials and organization operation</li>
+<li>Developed an automatic web page for reproducible monthly analysis to
+improve efficiency</li>
+<li>Used SAS for database management and statistical analysis based on
+new evidence research policy</li>
 </ul>
 <p><br/></p>
 <strong>Business Development Dept., Cargill (China)</strong>
@@ -441,17 +481,26 @@ Shanghai, China
 06/2018 - 09/2018
 </p>
 <ul>
-<li>Conducted SWOT analysis of competitors’ financial and market share reports, created data analysis template and fitting function diagrams to show competitors’ trends, and drafted key competitor movement earning call report</li>
-<li>Created database via Access for industry news since 2016, and finished competitive analysis report and market opportunities spaces analysis report independently</li>
+<li>Conducted SWOT analysis of competitors’ financial and market share
+reports, created data analysis template and fitting function diagrams to
+show competitors’ trends, and drafted key competitor movement earning
+call report</li>
+<li>Created database via Access for industry news since 2016, and
+finished competitive analysis report and market opportunities spaces
+analysis report independently</li>
 </ul>
 <p><br/></p>
-<strong>Statistical Methods in Medical Research and Development</strong> <em>Independent Study, Advised by Professor Jin XU</em>
+<strong>Statistical Methods in Medical Research and Development</strong>
+<em>Independent Study, Advised by Professor Jin XU</em>
 <p align="right">
 08/2018 – 09/2019
 </p>
 <ul>
-<li>Referred to medical research papers concerning medicines from top 10 pharmaceutical companies around the world and write summaries of the adopted statistical methods</li>
-<li>Attend weekly seminars related to statistical methods of medical journals for clinical trials</li>
+<li>Referred to medical research papers concerning medicines from top 10
+pharmaceutical companies around the world and write summaries of the
+adopted statistical methods</li>
+<li>Attend weekly seminars related to statistical methods of medical
+journals for clinical trials</li>
 </ul>
 <p><br/></p>
 </div>
@@ -461,16 +510,23 @@ Shanghai, China
 </div>
 <div id="additional-information" class="section level2">
 <h2>Additional Information</h2>
-<p><strong>Computer Skills</strong>: R, SAS, SPSS, MATLAB, Python , C++, Microsoft Office Access, Excel</p>
+<p><strong>Computer Skills</strong>: R, SAS, SPSS, MATLAB, Python , C++,
+Microsoft Office Access, Excel</p>
 <p><strong>Courses</strong> :</p>
-<p><em>Statistical Courses:</em> Biostatistical Method, Data Science, Statistical Inference, Probability, The Advanced Topics in Statistical Computing, Clinical Trial Methodology, Survival Analysis, Causal Inference, Statistical Learning and Data Mining;</p>
-<p><em>Math Courses:</em> Real Analysis, Functional Analysis, Complex Analysis, Measure Theory, Ordinary Differential Equation, Partial Differential Equation, Topology, Differential Geometry;</p>
+<p><em>Statistical Courses:</em> Biostatistics Method, Data Science,
+Statistical Inference, Probability, The Advanced Topics in Statistical
+Computing, Clinical Trial Methodology, Survival Analysis, Causal
+Inference, Statistical Learning and Data Mining;</p>
+<p><em>Math Courses:</em> Real Analysis, Functional Analysis, Complex
+Analysis, Measure Theory, Ordinary Differential Equation, Partial
+Differential Equation, Topology, Differential Geometry;</p>
 <p><br/></p>
 </div>
 </div>
 <div id="non-academic-interests" class="section level1">
 <h1>Non-academic interests</h1>
-<p>Besides biostatistics, I also interested in lots of things like playing the piano, dancing and my dog.</p>
+<p>Besides biostatistics, I also interested in lots of things like
+playing the piano, dancing and my dog.</p>
 <p><img src="IMG_5310.JPG" style="width:50%"></p>
 </div>
 

@@ -17,7 +17,11 @@ navbar:
       href: curriculum_vitae.pdf
       
     - text: "Transcript"
-      href: eTranscript.pdf
+      menu:
+        - text: "Columbia"
+          href: eTranscript.pdf
+        - text: "Penn State"
+          href: psu_trans.pdf
       
     - icon: fa-github fa-lg
       href: "https://github.com/ys3298"

@@ -28,11 +28,15 @@ Please see the latest projects in my [resume](curriculum_vitae.pdf).
   
   * 
 
-  * Improved HDPS algorithm for propensity score variable selection
+  * Proposed robust propensity score (PS) estimation method by incorporating covariate imbalance into loss function of multiple machine learning methods
+
+  * Extend the method to high-dimensional claims data setting with outcome assisted variable selection method
+
+  * Conduct empirical simulation and plasmode simulation to compare ATE estimation using different PS methods
   
-  * Applied the propensity score variable slection methods on MarketScan real-world data
-  
-  * Compared the ATE estimation using propensity score methods with clinical trials findings
+  * Applied the proposed propensity score methods on gastrointestinal complications comparison using MarketScan real-world data and compare with clinical trials findings
+
+  *Manuscript in preparation
   
 </tr>
 
@@ -42,16 +46,16 @@ Please see the latest projects in my [resume](curriculum_vitae.pdf).
   <td style="text-align:right; vertical-align:bottom"><font color="8B8A8A">- Research assistant, supervised by Professor Shouhao Zhou, <br>Penn State University</font></td>
 </tr>
 <tr>
-  <td colspan="2" style="height:20px; vertical-align:middle"><h3><b>Survival Analysis of After Transplant Leukemia Patients Relapse</b></h3></td>
+  <td colspan="2" style="height:20px; vertical-align:middle"><h3><b>SGraphical Representation and Statistical Test for Irreversible Time-dependent Ordinal Covariate for Survival Analysis and Competing Risk Analysis</b></h3></td>
 </tr>
 <tr>
     <td colspan="2">
   
   * 
 
-  * Applied time-varying competing risk model to find association between chimerism increase and non-relapse death
+  * Developed graphical representation and statistical test for irreversible time-dependent ordinal covariate for survival and competing risk analysis by estimating and calibrating cumulative incidence function with inverse probabilistic weighting of stage transition
   
-  * Developed graphical representation and statistical test for irreversible time-dependent ordinal covariate for survival and competing risk analysis
+  * Developed ShinyApp for application
   
 
 </tr>

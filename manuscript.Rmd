@@ -14,14 +14,16 @@ output: html_document
 <col width="50%">
 
 
+## 2023
+
+Che, X., Roy, A., Bresnahan, M., Mjaaland, S., Reichborn-Kjennerud, T., Magnus, P., Stoltenberg, C., \textbf{Shang, Y.}, Zhang, K., Susser, E., Fiehn, O., \& Lipkin, W. I. ``Metabolomic analysis of maternal mid-gestation plasma and cord blood in autism spectrum disorders". Molecular psychiatry, 2023; 28(6):2355–2369. doi:10.1038/s41380-023-02051-w
 
 ## 2022
 
-Endres K M, Kierys K, Shang Y, et al. A Multicenter Retrospective Evaluation of Specialized Laboratory Investigations in the Workup of Pediatric Patients With New-Onset Supraventricular Tachycardia[J]. Journal of Emergency Nursing, 2022.
+Endres KM, Kierys K, \textbf{Shang Y}, et al. A Multicenter Retrospective Evaluation of Specialized Laboratory Investigations in the Workup of Pediatric Patients With New-Onset Supraventricular Tachycardia. J Emerg Nurs. 2022;48(6):678-687. doi:10.1016/j.jen.2022.07.002
 
 ## 2021
 
-Shechter, Ari & Chiuzan, Cody & Shang, Yimeng & Ko, Gavin & Diaz, Franchesca & Venner, Hadiah & Shaw, Kaitlin & Cannone, Diane & McMurry, Cara & Sullivan, Alexandra & Rivera, Reynaldo & Vose, Courtney & Shapiro, Peter & Abdalla, Marwah. (2021). Prevalence, Incidence, and Factors Associated with Posttraumatic Stress at Three-Month Follow-Up among New York City Healthcare Workers after the First Wave of the COVID-19 Pandemic. International Journal of Environmental Research and Public Health. 19. 262. 10.3390/ijerph19010262. 
+Shechter A, Chiuzan C, \textbf{Shang Y}, et al. Prevalence, Incidence, and Factors Associated with Posttraumatic Stress at Three-Month Follow-Up among New York City Healthcare Workers after the First Wave of the COVID-19 Pandemic. Int J Environ Res Public Health. 2021;19(1):262. doi:10.3390/ijerph19010262
 
-
-Abdalla, Marwah & Chiuzan, Cody & Shang, Yimeng & Ko, Gavin & Diaz, Franchesca & Shaw, Kaitlin & McMurry, Cara & Cannone, Diane & Sullivan, Alexandra & Lee, Sung A & Venner, Hadiah & Shechter, Ari. (2021). Factors Associated with Insomnia Symptoms in a Longitudinal Study among New York City Healthcare Workers during the COVID-19 Pandemic. International journal of environmental research and public health. 18. 10.3390/ijerph18178970. 
+Abdalla M, Chiuzan C, \textbf{Shang Y}, et al. Factors Associated with Insomnia Symptoms in a Longitudinal Study among New York City Healthcare Workers during the COVID-19 Pandemic. Int J Environ Res Public Health. 2021;18(17):8970. doi:10.3390/ijerph18178970

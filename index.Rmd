@@ -9,11 +9,11 @@ output:
 <br/>
 
 # About me
-My name is Yimeng Shang, now a third-year Ph.D. student in biostatistics in [Penn State University](https://med.psu.edu/biostatistics-phd). I got my Master's degree in the Mailman School of Public Health in [Columbia University in the city of New York](https://www.columbia.edu/). 
+My name is Yimeng Shang, now a last-year Ph.D. student in biostatistics in [Penn State University](https://med.psu.edu/biostatistics-phd). I got my Master's degree in the Mailman School of Public Health in [Columbia University in the city of New York](https://www.columbia.edu/). 
 
-I'm interested in analyzing high-dimensional data. My research mainly involves using <b>machine learning methods</b> to improve <b>causal inference</b> specifically we are now developing variable selection methods for propensity score model using <b>MarketScan Claims data</b>.
+My research mainly involves using <b>machine learning methods</b> to improve <b>causal inference</b> specifically we are now developing variable/confounder selection methods for propensity score model using <b>MarketScan Claims data</b>.
 
-I took courses in Biostatistical method, Probability, Statistical Inference, Causal Inference, Data Science, Clinical Trial Methodology, Survival Analysis, Epidemiology, Adcanced Statistical Computing, Machine Learning and Data Mining.
+I took courses in Biostatistical method, Probability, Statistical Inference, Causal Inference, Data Science, Clinical Trial Methodology, Survival Analysis, Epidemiology, Statistical Computing, Machine Learning and Data Mining.
 
 Learn more from [here](aboutme.html) and from my [resume](curriculum_vitae.pdf).
 
@@ -22,5 +22,5 @@ Learn more from [here](aboutme.html) and from my [resume](curriculum_vitae.pdf).
 # Contact
 Tel: +1 (646)-704-5390 [The United State] OR +86 153-8826-0313 [China]
 
-Email:<ymshang@psu.edu> OR <ymshang1024@gmail.com>
+Email:<yqs5519@psu.edu> OR <ymshang1024@gmail.com>
 

@@ -13,7 +13,7 @@ output:
 
 ## Education
 
-**Pennsylvania State University** (Ph.D. in Biostatistics) <p align="right">08/2021 – 05/2025 (Expected)</p>
+**Pennsylvania State University** (Ph.D. in Biostatistics) GPA:4.0/4.0<p align="right">08/2021 – 05/2025 (Expected)</p>
 
 **Columbia University in the city of New York** (M.S. in Biostatistics, Theory and Methods Track) GPA:4.0/4.0<p align="right">08/2019 – 04/2021</p>
 
@@ -52,7 +52,17 @@ output:
 
 <br/>
 
-**Cytel**<p align="right">Boston, MA, The United States</p>
+**Merck**<p align="right">Upper Gwynedd, PA, US</p>
+*Strategic Consulting Summer Intern*<p align="right">06/2024 – 08/2024</p>
+
+- Examined various indirect treatment comparison (ITC) methods, including Bucher method, Simulated Treatment Comparison (STC), and Matching-Adjusted Indirect Comparison (MAIC), for longitudinal outcomes across different trial populations through simulation studies
+- Proposed Arm-based MAIC to preserve the balance between arms in the reweighted population, which showed more accurate and precise estimation, better controlled Type I error and greater statistical power, compared to conventional MAIC
+- Applied and compared different ITC methods in real vaccine trials
+
+
+<br/>
+
+**Cytel**<p align="right">Boston, MA, US</p>
 *Strategic Consulting Summer Intern*<p align="right">06/2021 – 08/2022</p>
 
 - Proposed predictive variable selection algorithm via knockoff filters 
@@ -91,11 +101,13 @@ output:
 <br/>
 
 ## Additional Information 
-**Computer Skills**: R, SAS, SPSS, MATLAB, Python , C++, Microsoft Office Access, Excel
+**Programming**: R (base R, Tidyverse, ggplot, RShiny, ggsurvfit, parallel computing), Python (Pytorch), SAS, STATA, Bash, Linux
+
+**Statistics**: Causal inference, Clinical trials, Variable selection, Survival analysis, Measurement error, Machine learning, Medical collaborative data analysis, Real world data/evidence (Claims/EHR data)
 
 **Courses** : 
 
-*Statistical Courses:* Biostatistics Method, Data Science, Statistical Inference, Probability, The Advanced Topics in Statistical Computing, Clinical Trial Methodology, Survival Analysis, Causal Inference, Statistical Learning and Data Mining;
+*Statistical Courses:* Biostatistics Method, Data Science, Statistical Inference, Probability, Statistical Computing, Clinical Trial Methodology, Survival Analysis, Causal Inference, Statistical Learning and Data Mining;
 
 *Math Courses:* Real Analysis, Functional Analysis, Complex Analysis, Measure Theory, Ordinary Differential Equation, Partial Differential Equation, Topology, Differential Geometry;
 

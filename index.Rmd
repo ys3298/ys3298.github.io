@@ -11,11 +11,12 @@ output:
 # About me
 My name is Yimeng Shang, now a last-year Ph.D. student in biostatistics in [Penn State University](https://med.psu.edu/biostatistics-phd). I got my Master's degree in the Mailman School of Public Health in [Columbia University in the city of New York](https://www.columbia.edu/). 
 
-My research mainly involves using <b>machine learning methods</b> to improve <b>causal inference</b> specifically we are now developing variable/confounder selection methods for propensity score model using <b>MarketScan Claims data</b>.
+My research mainly involves using <b>causal inference</b> with observational data, including robust propensity score estiamtion and measurement error of treatment assignment. 
 
-I took courses in Biostatistical method, Probability, Statistical Inference, Causal Inference, Data Science, Clinical Trial Methodology, Survival Analysis, Epidemiology, Statistical Computing, Machine Learning and Data Mining.
+I took courses in Biostatistical method, Probability, Statistical Inference, Causal Inference, Data Science, Clinical Trial Methodology, Survival Analysis, Epidemiology, Statistical Computing
+<!-- , Machine Learning and Data Mining -->.
 
-Learn more from [here](aboutme.html) and from my [resume](curriculum_vitae.pdf).
+<!-- Learn more from [here](aboutme.html) and from my [resume](curriculum_vitae.pdf). -->
 
 ![](IMG_2433.JPG)
 

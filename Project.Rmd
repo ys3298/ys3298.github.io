@@ -28,7 +28,7 @@ output: html_document
   
   * 
 
-  * Proposed robust propensity score (PS) estimation method by incorporating covariate imbalance into loss function of multiple machine learning methods
+  * Proposed robust propensity score (PS) estimation method by incorporating covariate imbalance into loss function of different base model methods
 
   * Extend the method to high-dimensional claims data setting with outcome assisted variable selection method
 

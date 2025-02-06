@@ -14,7 +14,7 @@ navbar:
       href: manuscript.html
       
     - text: "Resume"
-      href:  curriculum_vitae.pdf
+      href:  CV.pdf
       
     - text: "Transcript"
       menu:
